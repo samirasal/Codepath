@@ -22,12 +22,12 @@ const Calendar = () => {
                 <tbody>
                 <tr>
                         <td className="time">8 am</td>
-                        <Event />
+                        <Event event='Starbucks ☕️' color ='green' location='646 Michigan Ave'/>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td></td>
+                        <Event event='Yolk 🍳' color ='green' location='355 E Ohio St'/>
                         <td></td>
                     </tr>
                     <tr>
@@ -35,15 +35,15 @@ const Calendar = () => {
                         <td></td>
                         <td></td>
                         <td></td>
+                        <Event event='Subway 🚊' color ='pink' location='Grand Station'/>
                         <td></td>
                         <td></td>
-                        <td></td>
-                        <td></td>
+                        <Event event='The Bean 🫘' color ='blue' location='Millenium Park'/>
                     </tr>
                     <tr>
                         <td className="time">10 am</td>
                         <td></td>
-                        <td></td>
+                        <Event event='River Cruise 🚢' color ='blue' location ='Chicago River'/>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -55,7 +55,7 @@ const Calendar = () => {
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td></td>
+                        <Event event='Deep Dish Pizza 🍕' color ='green' location="Giodano's"/>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -67,7 +67,7 @@ const Calendar = () => {
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td></td>
+                        <Event event='Subway 🚊' color ='pink' location='Washington Station'/>
                         <td></td>
                     </tr>
                     <tr>
@@ -84,19 +84,19 @@ const Calendar = () => {
                         <td className="time">2 pm</td>
                         <td></td>
                         <td></td>
+                        <Event event='Art Institute 🖼️' color ='blue' location='111 S  Michigan Ave'/>
                         <td></td>
-                        <td></td>
-                        <td></td>
+                        <Event event='Girls & the Goat' color ='green' location='809 W  Randolph St'/>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
                         <td className="time">3 pm</td>
+                        <Event event='Cubs Game 🏟️' color ='blue' location='Wrigley Field'/>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td></td>
-                        <td></td>
+                        <Event event='Subway 🚊' color ='pink' location='Roosevelt Station'/>
                         <td></td>
                         <td></td>
                     </tr>
@@ -104,7 +104,7 @@ const Calendar = () => {
                         <td className="time">4 pm</td>
                         <td></td>
                         <td></td>
-                        <td></td>
+                        <Event event='Fancy Dinner 🎩' color ='green' location='Maple & Ash'/>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -118,7 +118,7 @@ const Calendar = () => {
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td></td>
+                        <Event event='Shopping 🛍️' color ='blue' location='Magnificent Mile'/>
                     </tr>
                 </tbody>
             </table>
