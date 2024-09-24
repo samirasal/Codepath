@@ -1,23 +1,56 @@
+:root {
+  --primary-color: #d6336c; 
+  --secondary-color: #a76b9c; 
+  --text-color: #4a4a4a;
+  --background-color: #fef2f8; 
+  --card-bg-color: #ffffff;
+  --card-border-color: #e3c6d5; 
+  --hover-bg-color: #f4eeff; 
+  --button-bg-color: #d6336c; 
+  --button-hover-bg-color: #c8235c; 
+  --heading-font: 'Playfair Display', serif; 
+  --body-font: 'Poppins', sans-serif; 
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 .App {
-  font-family: Arial, sans-serif;
   text-align: center;
   padding: 20px;
 }
 
 h1 {
-  font-size: 2rem;
+  font-family: var(--heading-font);
+  font-size: 2.5rem;
+  color: var(--primary-color);
   margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
 }
 
 .board {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
+  padding: 20px;
 }
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .board {
