@@ -1,4 +1,4 @@
-# Web Development Project 2 - *French Expression Flashcard*
+# Web Development Project 2 - *French Expressions Flashcard*
 
 Submitted by: **Samira Salifu**
 
