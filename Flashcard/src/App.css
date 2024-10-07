@@ -106,7 +106,7 @@ h4{
 .button-container {
   display: flex;
   justify-content: center; 
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 button {
@@ -120,8 +120,56 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: yellow;
+  color: black;
 }
+
+.feedback {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.feedback.correct {
+  color: green;
+}
+
+.feedback.incorrect {
+  color: red;
+}
+
+.input-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  
+}
+
+input {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+
+}
+
+  #submit-btn {
+  padding: 10px 20px;
+  margin-left: 5px;
+  background-color: black;
+  color: yellow;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submit-btn:hover {
+  background-color: yellow;
+  color: black;
+}
+
 
 
 @keyframes logo-spin {

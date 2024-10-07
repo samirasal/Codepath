@@ -5,21 +5,24 @@ const Flashcard = () => {
         title: "French to English Flashcards",
         description: "How ready are you to live in France? Let's put you to the test! Learn common French expressions and their English translations.",
         cards: [
-            { question: "C'est la vie", answer: "That's life", frontGif: "/src/images/c'est.jpeg" },
-            { question: "Bon voyage", answer: "Safe travels", frontGif: "/src/images/forest-gump.gif" },
-            { question: "Au revoir", answer: "Goodbye", backGif: "/src/images/slide-bye.gif" },
-            { question: "À bientôt", answer: "See you soon", backGif: "/src/images/seeyousoon.jpeg" },
-            { question: "À demain", answer: "See you tomorrow", backGif: "/src/images/tomorrow-shawn.gif" },
-            { question: "Je suis désolé(e)", answer: "I am sorry", frontGif: "/src/images/sorry.jpg" },
-            { question: "Je suis perdu(e)", answer: "I am lost", backGif: "/src/images/stitch.gif" },
-            { question: "Je suis fatigué(e)", answer: "I am tired", backGif: "/src/images/tired.jpg" },
-            { question: "Je suis heureux(se)", answer: "I am happy", backGif: "/src/images/happy.jpg" },
-            { question: "Je suis malade", answer: "I am sick", backGif: "/src/images/tired-health.gif" },
+            { question: "C'est la vie", answer: "That's life", frontGif: "../src/images/c'est.jpeg" },
+            { question: "Bon voyage", answer: "Safe travels", frontGif: "../src/images/forest-gump.gif" },
+            { question: "Au revoir", answer: "Goodbye", backGif: "../src/images/slide-bye.gif" },
+            { question: "À bientôt", answer: "See you soon", backGif: "../src/images/seeyousoon.jpeg" },
+            { question: "À demain", answer: "See you tomorrow", backGif: "../src/images/tomorrow-shawn.gif" },
+            { question: "Je suis désolé(e)", answer: "I am sorry", frontGif: "../src/images/sorry.jpg" },
+            { question: "Je suis perdu(e)", answer: "I am lost", backGif: "../src/images/stitch.gif" },
+            { question: "Je suis fatigué(e)", answer: "I am tired", backGif: "../src/images/tired.jpg" },
+            { question: "Je suis heureux(se)", answer: "I am happy", backGif: "../src/images/happy.jpg" },
+            { question: "Je suis malade", answer: "I am sick", backGif: "../src/images/tired-health.gif" },
         ],
     };
 
     const [currentCardIndex, setCurrentCardIndex] = useState(0);
     const [isFlipped, setIsFlipped] = useState(false);
+    const [userGuess, setUserGuess] = useState(" ");
+    const [feedback, setFeedback] = useState(" ");
+    const [hasGuessed, setHasGuessed] = useState(false);
 
     const handleFlip = () => {
         setIsFlipped(!isFlipped);
@@ -29,6 +32,7 @@ const Flashcard = () => {
         console.log("Next card button clicked");
         setCurrentCardIndex((prevIndex) => (prevIndex + 1) % cardSet.cards.length); 
         setIsFlipped(false);
+        resetInput();
     };
 
     const handlePreviousCard = () => {
@@ -37,7 +41,24 @@ const Flashcard = () => {
             prevIndex === 0 ? cardSet.cards.length - 1 : prevIndex - 1
         );
         setIsFlipped(false);
+        resetInput();
     };
+
+    const handleSubmitGuess = () => {
+        if (userGuess.trim().toLowerCase() === currentCard.answer.toLowerCase()){
+            setFeedback("Correct!");
+        }
+        else {
+            setFeedback("Incorrect. Try again!");
+        }
+        setHasGuessed(true);
+        setIsFlipped(true);
+    }
+    const resetInput = () => {
+        setUserGuess("");
+        setFeedback("");
+        setHasGuessed(false);
+    }
 
     const currentCard = cardSet.cards[currentCardIndex];
 
@@ -69,6 +90,20 @@ const Flashcard = () => {
                     </div>
                 </div>
             </div>
+
+            {/*  User input for guesses */ }
+            {!hasGuessed &&(
+                <div className="input-container">
+                    <input type="text"
+                    placeholder="Enter your answer" 
+                    value={userGuess}
+                    onChange={(e) => setUserGuess(e.target.value)}/>
+                    <button id="submit-btn"onClick={handleSubmitGuess}>Submit</button>
+                </div>
+            )}
+            {/* Feedbacks */}
+            {feedback && <p className="feedback">{feedback}</p>}
+
 
             <div className="button-container">
                 <button onClick={handlePreviousCard}>←</button>
