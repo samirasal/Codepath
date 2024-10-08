@@ -1,10 +1,9 @@
-#root {
-  
 
+#root {
   background-image: url("/src/images/bg.jpg");
   background-size: cover; /* Add this line */
   background-position: center; /* Add this line */
-  height: 130vh; /* Add this line */
+  height: 150vh; /* Add this line */
   width: 100vw;
   margin: 0;
   padding: 0;
@@ -140,26 +139,30 @@ button:hover {
 
 .feedback {
   font-size: 1.2rem;
+  align-items: center;
   font-weight: bold;
   margin-top: 10px;
+  display: inline-block;
+  
 }
 
 .feedback.correct {
   color: green;
   background-color: white;
   padding: 10px;
-  margin-left: 250px;
-  margin-right: 250px;
+  margin-left: 20px;
+  
 }
 
 .feedback.incorrect {
   color: red;
   background-color: white;
   padding: 10px;
-  margin-left: 250px;
-  margin-right: 250px;
+ margin-left: 20px;
 }
-
+.no-feedback {
+  background-color: transparent; /* Transparent or no background before user clicks Submit */
+}
 
 
 .input-container {

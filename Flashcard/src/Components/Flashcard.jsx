@@ -22,7 +22,7 @@ const Flashcard = () => {
     const [currentCardIndex, setCurrentCardIndex] = useState(0);
     const [isFlipped, setIsFlipped] = useState(false);
     const [userGuess, setUserGuess] = useState(" ");
-    const [feedback, setFeedback] = useState(" ");
+    const [feedback, setFeedback] = useState("");
     const [hasGuessed, setHasGuessed] = useState(false);
     
     const [currentStreak, setCurrentStreak] = useState(0);
@@ -60,6 +60,7 @@ const Flashcard = () => {
     };
 
     const handleSubmitGuess = () => {
+        const currentCard = cards[currentCardIndex];
         if (userGuess.trim().toLowerCase() === currentCard.answer.toLowerCase()){
             setFeedback("Correct!");
             const newCurrentStreak = currentStreak + 1;
@@ -75,6 +76,7 @@ const Flashcard = () => {
         }
         setHasGuessed(true);
         setIsFlipped(true);
+        // resetInput();
     }
     const resetInput = () => {
         setUserGuess("");
@@ -119,20 +121,28 @@ const Flashcard = () => {
             </div>
 
             {/*  User input for guesses */ }
-            {!hasGuessed &&(
+            {!hasGuessed && (
                 <div className="input-container">
-                    <input type="text"
-                    placeholder="Enter your answer" 
-                    value={userGuess}
-                    onChange={(e) => setUserGuess(e.target.value)}/>
-                    <button id="submit-btn"onClick={handleSubmitGuess}>Submit</button>
+                    <input
+                        type="text"
+                        placeholder="Enter your answer"
+                        value={userGuess}
+                        onChange={(e) => setUserGuess(e.target.value)}
+                    />
+                    <button id="submit-btn" onClick={handleSubmitGuess}>Submit</button>
                 </div>
             )}
             {/* Feedbacks */}
-            {feedback && <p className={`feedback ${feedback === "Correct!" ? "correct" : "incorrect"}`}>
-  {feedback}
-</p>
-}
+            {feedback && (
+  <p
+    className={`feedback ${feedback === "Correct!" ? "correct" : "incorrect"} ${
+      !feedback ? "no-feedback" : ""
+    }`}
+  >
+    {feedback}
+  </p>
+)}
+
 
 
             <div className="button-container">
