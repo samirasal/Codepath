@@ -18,29 +18,41 @@ const Flashcard = () => {
         ],
     };
 
+    const [cards, setCards] = useState(cardSet.cards);
     const [currentCardIndex, setCurrentCardIndex] = useState(0);
     const [isFlipped, setIsFlipped] = useState(false);
     const [userGuess, setUserGuess] = useState(" ");
     const [feedback, setFeedback] = useState(" ");
     const [hasGuessed, setHasGuessed] = useState(false);
-
+    
     const handleFlip = () => {
         setIsFlipped(!isFlipped);
     };
 
     const handleNextCard = () => {
-        console.log("Next card button clicked");
         setCurrentCardIndex((prevIndex) => (prevIndex + 1) % cardSet.cards.length); 
         setIsFlipped(false);
         resetInput();
     };
 
     const handlePreviousCard = () => {
-        console.log("Previous card button clicked");
         setCurrentCardIndex((prevIndex) =>
             prevIndex === 0 ? cardSet.cards.length - 1 : prevIndex - 1
         );
         setIsFlipped(false);
+        resetInput();
+    };
+
+    const shuffleCards = () => {
+        const shuffledCards = [...cards];
+        for (let i = shuffledCards.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [shuffledCards[i], shuffledCards[j]] = [shuffledCards[j], shuffledCards[i]];
+        }
+
+        setCards(shuffledCards);
+        const randomIndex = Math.floor(Math.random() * shuffledCards.length);
+        setCurrentCardIndex(randomIndex);
         resetInput();
     };
 
@@ -108,6 +120,7 @@ const Flashcard = () => {
             <div className="button-container">
                 <button onClick={handlePreviousCard}>←</button>
                 <button onClick={handleNextCard}>→</button>
+                <button onClick={shuffleCards}>Shuffle Cards</button>
             </div>
         </div>
     );
