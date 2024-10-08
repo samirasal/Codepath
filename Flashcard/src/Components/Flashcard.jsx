@@ -25,6 +25,9 @@ const Flashcard = () => {
     const [feedback, setFeedback] = useState(" ");
     const [hasGuessed, setHasGuessed] = useState(false);
     
+    const [currentStreak, setCurrentStreak] = useState(0);
+    const [longestStreak, setLongestStreak] = useState(0);
+
     const handleFlip = () => {
         setIsFlipped(!isFlipped);
     };
@@ -59,9 +62,16 @@ const Flashcard = () => {
     const handleSubmitGuess = () => {
         if (userGuess.trim().toLowerCase() === currentCard.answer.toLowerCase()){
             setFeedback("Correct!");
+            const newCurrentStreak = currentStreak + 1;
+            setCurrentStreak(newCurrentStreak);
+
+            if (newCurrentStreak > longestStreak) {
+                setLongestStreak(newCurrentStreak);
+            }
         }
         else {
             setFeedback("Incorrect. Try again!");
+            setCurrentStreak(0);
         }
         setHasGuessed(true);
         setIsFlipped(true);
@@ -78,8 +88,13 @@ const Flashcard = () => {
         <div className="flashcard-app">
             <h2>{cardSet.title}</h2>
             <p>{cardSet.description}</p>
-            <p>Total Cards: {cardSet.cards.length}</p>
+            <p className="t-cards">Total Cards: {cardSet.cards.length}</p>
 
+            <div className="streak-info">
+                <p>Current Streak: {currentStreak}</p>
+                <p>Longest Streak: {longestStreak}</p>
+            </div> 
+           
             <div className="flashcard-container">
                 <div className={`flashcard ${isFlipped ? "flipped" : ""}`} onClick={handleFlip}>
                     <div className="flashcard-front">
@@ -114,7 +129,10 @@ const Flashcard = () => {
                 </div>
             )}
             {/* Feedbacks */}
-            {feedback && <p className="feedback">{feedback}</p>}
+            {feedback && <p className={`feedback ${feedback === "Correct!" ? "correct" : "incorrect"}`}>
+  {feedback}
+</p>
+}
 
 
             <div className="button-container">

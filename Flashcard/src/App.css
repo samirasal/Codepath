@@ -30,24 +30,38 @@
   perspective: 1000px; /* Creates a 3D space */
   margin: -50px auto;
   width: 700px;
-  height: 300px; /* Center the flashcard horizontally */
-  align-items: center; /* Center the flashcard vertically */
-  height: 100vh; /* Full height of the viewport */
-  padding: 20px; /* Add padding if needed */
+  height: 300px; 
+  align-items: center; 
+  height: 100vh; 
+  padding: 20px; 
   
 }
 
 
 .flashcard {
-  width: 800px; /* Adjust the width as needed */
-  height: 500px; /* Adjust the height as needed */
+  width: 800px; 
+  height: 500px; 
   perspective: 1000px;
   transform-style: preserve-3d;
-  transition: transform 0.6s; /* Perspective for 3D effect */
-  position: relative; /* Relative positioning for child elements */
+  transition: transform 0.6s; 
+  position: relative; 
   
 }
 
+.flashcard-app {
+  display: inline;
+  color: black;
+  font-weight: 600;
+  font-size: 18px;
+  
+}
+.streak-info p{
+  display: inline;
+  margin-right: 50px;
+  margin-left: 50px;
+
+
+}
 
 .flashcard.flipped {
   transform: rotateY(180deg);
@@ -132,11 +146,21 @@ button:hover {
 
 .feedback.correct {
   color: green;
+  background-color: white;
+  padding: 10px;
+  margin-left: 250px;
+  margin-right: 250px;
 }
 
 .feedback.incorrect {
   color: red;
+  background-color: white;
+  padding: 10px;
+  margin-left: 250px;
+  margin-right: 250px;
 }
+
+
 
 .input-container {
   margin-top: 20px;
@@ -185,6 +209,8 @@ input {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
+
+  
 }
 
 
