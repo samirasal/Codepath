@@ -26,6 +26,8 @@ The following **additional** features are implemented:
 
 * [X] List anything else that you added to improve the site's functionality!
 Added a scroll animation and gave the UI a 3D perspective
+- [X] Cards have different visual styles such as color based on their category
+  - [X] *visual style implemented*
 
 ## Video Walkthrough
 
