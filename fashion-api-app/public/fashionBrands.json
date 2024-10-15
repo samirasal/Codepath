@@ -1,0 +1,83 @@
+[
+    {
+      "id": 1,
+      "name": "Gucci",
+      "founder": "Guccio Gucci",
+      "foundedYear": "1921",
+      "description": "Gucci is an Italian luxury brand known for its fashion-forward designs and luxury goods.",
+      "imageUrl": "https://thumbs.dreamstime.com/b/web-183281700.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Chanel",
+      "founder": "Coco Chanel",
+      "foundedYear": "1910",
+      "description": "Chanel is a French high fashion house that focuses on women's ready-to-wear clothes, luxury goods, and accessories.",
+      "imageUrl": "https://logocreator.io/wp-content/uploads/2023/11/BlogThumbnail_755ead76-44e0-4627-bc93-55b0ad9c6722.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Louis Vuitton",
+      "founder": "Louis Vuitton",
+      "foundedYear": "1854",
+      "description": "Louis Vuitton is a French fashion house and luxury goods company founded in 1854.",
+      "imageUrl": "https://media.designrush.com/inspiration_images/136124/conversions/_1519762849_545_990__1513771354_519_louis-v1_b31600c58738-preview.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Prada",
+      "founder": "Mario Prada",
+      "foundedYear": "1913",
+      "description": "Prada is an Italian luxury fashion house known for its leather handbags, ready-to-wear, shoes, and accessories.",
+      "imageUrl": "https://i.pinimg.com/564x/5e/38/03/5e3803becc34c6202a3eb527e25b565d.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Versace",
+      "founder": "Gianni Versace",
+      "foundedYear": "1978",
+      "description": "Versace is an Italian luxury fashion company and trade name founded by Gianni Versace, producing accessories, fragrances, and home furnishings.",
+      "imageUrl": "https://logo.com/image-cdn/images/kts928pd/production/ede876838fea33f3023070c103a055edf6ed65a0-1140x620.png?q=72&fm=webp"
+    },
+    {
+      "id": 6,
+      "name": "Hermès",
+      "founder": "Thierry Hermès",
+      "foundedYear": "1837",
+      "description": "Hermès is a French high fashion luxury goods manufacturer specializing in leather, lifestyle accessories, home furnishings, perfumery, jewelry, watches, and ready-to-wear.",
+      "imageUrl": "https://logo.com/image-cdn/images/kts928pd/production/59f2aa87d3c8527e5f6adfb709080f5bf69c11f7-1024x600.png?w=1920&q=72&fm=webp"
+    },
+    {
+      "id": 7,
+      "name": "Dior",
+      "founder": "Christian Dior",
+      "foundedYear": "1946",
+      "description": "Dior is a French luxury goods company known for haute couture, leather goods, fashion accessories, and fragrances.",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0558/6413/1764/files/Rewrite_Dior_Logo_Design_History_Evolution_2_1024x1024.jpg?v=1694703784"
+    },
+    {
+      "id": 8,
+      "name": "Balenciaga",
+      "founder": "Cristóbal Balenciaga",
+      "foundedYear": "1917",
+      "description": "Balenciaga is a luxury fashion house founded in Spain, known for its innovative and modernist designs.",
+      "imageUrl": "https://wwd.com/wp-content/uploads/2017/09/balenciaga_logotype_cmyk-copy.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Burberry",
+      "founder": "Thomas Burberry",
+      "foundedYear": "1856",
+      "description": "Burberry is a British luxury fashion brand, known for its trench coats, distinctive check pattern, and outdoor apparel.",
+      "imageUrl": "https://s2-ug.ap4r.com/image-aigc-article/seoPic/origin/367a40dfb7191da6a2939a50fa66cd80016f1226.png"
+    },
+    {
+      "id": 10,
+      "name": "Fendi",
+      "founder": "Adele and Edoardo Fendi",
+      "foundedYear": "1925",
+      "description": "Fendi is an Italian luxury fashion house best known for its leather goods, ready-to-wear, and accessories.",
+      "imageUrl": "https://cdn.worldvectorlogo.com/logos/fendi.svg"
+    }
+  ]
+  
