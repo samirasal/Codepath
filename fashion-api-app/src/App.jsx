@@ -13,15 +13,20 @@ function App() {
 
   // Fetch data from the mock JSON API
   useEffect(() => {
-    fetch("/fashionBrands.json")
-      .then((response) => response.json())
-      .then((data) => {
+    const fetchBrands = async () => {
+      try {
+        const response = await fetch("/fashionBrands.json");
+        const data = await response.json();
         setBrands(data);
-        getRandomBrand(data);
-      });
+        getRandomBrand(data); // Get a random brand after fetching data
+      } catch (error) {
+        console.error("Error fetching the brands:", error);
+      }
+    };
+
+    fetchBrands(); // Call the async function to fetch data
   }, []);
 
-  
   const getRandomBrand = (availableBrands) => {
     const filteredBrands = availableBrands.filter(
       (brand) => !banList.includes(brand.name)
@@ -31,19 +36,17 @@ function App() {
         filteredBrands[Math.floor(Math.random() * filteredBrands.length)];
       setCurrentBrand(randomBrand);
     } else {
-      setCurrentBrand(null); 
+      setCurrentBrand(null);
     }
   };
 
-  
   const handleNext = () => {
     getRandomBrand(brands);
   };
 
-  
   const handleBan = (brandName) => {
     setBanList([...banList, brandName]);
-    handleNext(); 
+    handleNext();
   };
 
   return (
