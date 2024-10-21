@@ -4,7 +4,7 @@ Submitted by: **Samira Salifu**
 
 This web app: **is a dashboard view that contains summary statistics and a list view of the data that can be searched and filtered**
 
-Time spent: **6** hours spent in total
+Time spent: **4** hours spent in total
 
 ## Required Features
 
@@ -44,7 +44,7 @@ GIF created with Kap
 ## Notes
 
 Describe any challenges encountered while building the app.
-
+ * [X] I struggled getting the APIs. I tried MarvelAPI initially and their page that holds their characters was down. I tried others as well and I had to wait for several hours before I could get access to them. But aside that, this project wasn't as hard as I expected.
 ## License
 
     Copyright [yyyy] [name of copyright owner]
