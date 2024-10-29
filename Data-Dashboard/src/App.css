@@ -61,12 +61,16 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-
+h1{
+  color: #FF8042;
+}
 
 h1, h3 {
   margin: 0;
   text-align: center;
+
 }
 ul img{
   display: inline-block;
+ 
 }
