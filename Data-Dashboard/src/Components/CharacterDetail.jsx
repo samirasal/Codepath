@@ -1,6 +1,7 @@
 // CharacterDetail.js
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Sidebar from '../Components/Sidebar';
 import axios from 'axios';
 
 const CharacterDetail = () => {
@@ -23,11 +24,13 @@ const CharacterDetail = () => {
   if (!character) return <p>Loading...</p>;
 
   return (
-    <div>
+    <div  className="character-container">
+        
       <h1>{character.name}</h1>
       <p>Status: {character.status}</p>
       <p>Species: {character.species}</p>
       <img src={character.image} alt={character.name} />
+      <Sidebar />
     </div>
   );
 };

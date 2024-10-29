@@ -61,6 +61,10 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+h1 .character-container {
+font-size: 200%;
+}
+
 h1{
   color: #FF8042;
   
