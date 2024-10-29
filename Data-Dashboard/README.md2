@@ -1,26 +1,26 @@
 # Web Development Project 6 - **
 
-Submitted by: **Your Name Here**
+Submitted by: **Samira Salifu**
 
-This web app: **insert description**
+This web app: ** is a data dashboard where data visualizations are added to the dashboard view and then constructing a detail view containing more info related to a given data point implementing dynamic links using React Router, giving each data point listed on the dashboard a unique link to a corresponding detail view.**
 
-Time spent: **X** hours spent in total
+Time spent: **4** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [ ] **The app includes at least one unique chart developed using the fetched data that tell an interesting story**
-- [ ] **Clicking on an item in the list view displays more details about it**
-  - [ ] To ensure an accurate grade, your sidebar **must** be viewable when showing the details view in your recording.
-- [ ] **Clicking on an item has a direct, unique link to that item's detail view page**
-  - [ ] To ensure an accurate grade, the URL/address bar of your web browser **must** be viewable in your recording.  
+- [X] **The app includes at least one unique chart developed using the fetched data that tell an interesting story**
+- [X] **Clicking on an item in the list view displays more details about it**
+  - [X] To ensure an accurate grade, your sidebar **must** be viewable when showing the details view in your recording.
+- [X] **Clicking on an item has a direct, unique link to that item's detail view page**
+  - [X] To ensure an accurate grade, the URL/address bar of your web browser **must** be viewable in your recording.  
 
 
 The following **optional** features are implemented:
 
 - [ ] The site's customized dashboard contains more content that explains what is interesting about the data
-- [ ] The site allows users to toggle between different data visualizations
+- [X] The site allows users to toggle between different data visualizations
 
 The following **additional** features are implemented:
 
