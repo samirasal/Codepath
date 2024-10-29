@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import StatusChart from '../Components/StatusChart';
 import SpeciesChart from '../Components/SpeciesChart';
+import Sidebar from '../Components/Sidebar';
 import '../App.css';
 
 const RickAndMortyDashboard = () => {
@@ -31,6 +32,7 @@ const RickAndMortyDashboard = () => {
 
   return (
     <div className='dashboard-container'>
+      <Sidebar />
       <h1>Rick and Morty Characters Dashboard</h1>
 
       {/* Summary Statistics */}
@@ -43,11 +45,12 @@ const RickAndMortyDashboard = () => {
 
       {/* Toggle Button for Chart Types */}
       <div>
+      
         <button onClick={() => setChartType('Status')}>Status Chart</button>
         <button onClick={() => setChartType('Species')}>Species Chart</button>
       </div>
 
-      {/* Conditionally Render Chart Based on chartType State */}
+
       <div className="chart-container">
         {chartType === 'Status' ? (
           <StatusChart characters={characters} />

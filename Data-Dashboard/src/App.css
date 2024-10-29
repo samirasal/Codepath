@@ -63,10 +63,12 @@ body {
 
 h1{
   color: #FF8042;
+  
+ 
 }
 
 h1, h3 {
-  margin: 0;
+  margin: 10px;
   text-align: center;
 
 }
@@ -74,3 +76,64 @@ ul img{
   display: inline-block;
  
 }
+
+.dashboard-layout {
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+}
+
+.dashboard-content {
+  margin-left: 220px; /* Adjust this to provide space for the sidebar */
+  padding: 20px;
+  width: 100%;
+}
+
+.chart-container {
+  margin-top: 20px;
+}
+
+.sidebar {
+  width: 12px;
+  font-size: 8px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #333;
+  color: white;
+  padding: 18px;
+}
+
+.sidebar h3 {
+  color: #00C49F;
+  margin-left: -15px;
+}
+/* #00C49F', '#FF8042', '#8884D8 */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 15px;
+}
+
+.sidebar a, .sidebar button {
+  color: #00C49F;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 10px 0;
+  display: block;
+  text-align: left;
+  margin-left: -10px;
+}
+
+.sidebar a:hover, .sidebar button:hover {
+  color: #ff6347; /* Light coral color on hover */
+}
+
