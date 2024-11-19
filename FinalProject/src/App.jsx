@@ -45,7 +45,7 @@ const toggleLayout = () => {
         </button>
       </div>
       <div className={`app ${layout}-layout`}>
-        <h1>Welcome to Fashion Social</h1>
+        <h2>Welcome to Fashion Social</h2>
         <Routes>
           <Route
             path="/"

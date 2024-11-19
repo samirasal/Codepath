@@ -31,8 +31,8 @@ function CreatePostForm({ addPost, userId }) {
 
   return (
     <div className="create-post-form">
-      <h2>Create a New Post</h2>
-      <h3>Share the latest fashion insights and sustainability initiatives!</h3>
+      <h3>Create a New Post</h3>
+      <h4>Share the latest fashion insights and sustainability initiatives!</h4>
     <form onSubmit={handleSubmit} className="create-post-form">
       <input
         type="text"
