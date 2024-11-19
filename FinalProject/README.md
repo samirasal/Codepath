@@ -1,4 +1,4 @@
-# Web Development Final Project - *Fahsion Social*
+# Web Development Final Project - *Fashion Social*
 
 Submitted by: **Samira Salifu**
 
@@ -54,6 +54,7 @@ GIF created with Kap
 ## Notes
 
 Describe any challenges encountered while building the app.
+I struggled alot with making this project in particular. Initially wanted to try using supabase to give it a backend feature but decided to trash it and focused mostly on getting the basic features of the app to work.
 
 ## License
 
