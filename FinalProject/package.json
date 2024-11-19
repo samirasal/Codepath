@@ -1,7 +1,5 @@
-
-
 {
-  "name": "crewmates",
+  "name": "finalproject",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,9 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.46.1",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
