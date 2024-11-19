@@ -9,6 +9,16 @@ import "./App.css";
 function App() {
   const [posts, setPosts] = useState([]);
   const [userId, setUserId] = useState("");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
+  const [layout, setLayout] = useState(localStorage.getItem("layout") || "list");
+
+ const toggleTheme = () => {
+  setTheme(theme === 'light' ? 'dark' : 'light');
+};
+
+const toggleLayout = () => {
+  setLayout(layout === 'list' ? 'grid' : 'list');
+};
 
   useEffect(() => {
     let storedUserId = localStorage.getItem("userId");
@@ -18,13 +28,24 @@ function App() {
     }
     setUserId(storedUserId);
   }, []);
+  useEffect(() => {
+    document.body.className = theme; 
+  }, [theme]);
 
   const addPost = (post) => setPosts([post, ...posts]);
 
   return (
     <Router>
-      <div className="app">
-        <h1>Fashion Social</h1>
+      <div className="preferences">
+        <button onClick={toggleTheme}className={theme === "dark" ? "dark-button" : "light-button"}>
+          {theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
+        </button>
+        <button onClick={toggleLayout} className={theme === "dark" ? "dark-button" : "light-button"}>
+          {layout === 'list' ? 'Switch to Grid Layout' : 'Switch to List Layout'}
+        </button>
+      </div>
+      <div className={`app ${layout}-layout`}>
+        <h1>Welcome to Fashion Social</h1>
         <Routes>
           <Route
             path="/"

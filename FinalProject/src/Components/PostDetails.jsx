@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { FacebookShareButton, TwitterShareButton, WhatsappShareButton } from "react-share";
 
 function PostDetails({ posts, setPosts, userId }) {
   const { id } = useParams();
@@ -76,7 +77,17 @@ function PostDetails({ posts, setPosts, userId }) {
       <p>Created: {post.createdAt.toLocaleString()}</p>
       <p>{post.content}</p>
       {post.imageUrl && <img src={post.imageUrl} alt={post.title} />}
-      <p>Upvotes: {post.upvotes}</p>
+      {post.videoUrl && (
+  <div className="video-container">
+    <iframe
+      src={post.videoUrl.replace("watch?v=", "embed/")} // Convert YouTube links
+      title="Video"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    ></iframe>
+  </div>
+)}      <p>Upvotes: {post.upvotes}</p>
       {referencedPost && (
         <div className="referenced-post">
           <h3>Referenced Post:</h3>
@@ -90,7 +101,19 @@ function PostDetails({ posts, setPosts, userId }) {
       <button onClick={handleEdit}>Edit</button>
       <button onClick={handleDelete}>Delete</button>
       <button onClick={handleRepost}>Repost</button>
-  
+      
+      <div className="share-buttons">
+        <FacebookShareButton url={`https://www.facebook.com/post/${post.id}`} quote={post.title}>
+          <button>Share on Facebook</button>
+        </FacebookShareButton>
+        <TwitterShareButton url={`https://www.x.com/post/${post.id}`} title={post.title}>
+          <button>Share on Twitter</button>
+        </TwitterShareButton>
+        <WhatsappShareButton url={`https://www.whatsapp.com/post/${post.id}`} title={post.title}>
+          <button>Share on WhatsApp</button>
+        </WhatsappShareButton>
+      </div>
+
       <h3>Comments</h3>
       <ul>
         {(post.comments || []).map((c, index) => (

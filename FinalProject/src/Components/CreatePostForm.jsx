@@ -5,6 +5,7 @@ function CreatePostForm({ addPost, userId }) {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [imageUrl, setImageUrl] = useState("");
+  const [videoUrl, setVideoUrl] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -31,6 +32,7 @@ function CreatePostForm({ addPost, userId }) {
   return (
     <div className="create-post-form">
       <h2>Create a New Post</h2>
+      <h3>Share the latest fashion insights and sustainability initiatives!</h3>
     <form onSubmit={handleSubmit} className="create-post-form">
       <input
         type="text"
@@ -50,6 +52,13 @@ function CreatePostForm({ addPost, userId }) {
         value={imageUrl}
         onChange={(e) => setImageUrl(e.target.value)}
       />
+      <input
+      type="url"
+      placeholder="Video URL (optional)"
+      value={videoUrl}
+      onChange={(e) => setVideoUrl(e.target.value)}
+    />
+    
       <button type="submit">Create Post</button>
     </form>
     </div>
